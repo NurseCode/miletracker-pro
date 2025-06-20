@@ -1,14 +1,10 @@
 {
   "name": "miletracker-pro",
   "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
-  "scripts": {
-    "start": "expo start"
-  },
+  "main": "expo/AppEntry.js",
   "dependencies": {
     "expo": "~53.0.0",
     "react": "18.3.1",
     "react-native": "0.76.5"
-  },
-  "private": true
+  }
 }
