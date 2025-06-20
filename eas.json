@@ -1,38 +1,11 @@
 {
   "cli": {
-    "version": ">= 5.4.0",
-    "appVersionSource": "remote"
+    "version": ">= 5.4.0"
   },
   "build": {
-    "development": {
-      "developmentClient": true,
-      "distribution": "internal"
-    },
     "preview": {
-      "distribution": "internal",
       "android": {
         "buildType": "apk"
-      }
-    },
-    "production": {
-      "android": {
-        "buildType": "app-bundle"
-      },
-      "ios": {
-        "buildConfiguration": "Release"
-      }
-    }
-  },
-  "submit": {
-    "production": {
-      "android": {
-        "serviceAccountKeyPath": "../path/to/api-key.json",
-        "track": "internal"
-      },
-      "ios": {
-        "appleId": "your-apple-id@example.com",
-        "ascAppId": "1234567890",
-        "appleTeamId": "ABCD123456"
       }
     }
   }
