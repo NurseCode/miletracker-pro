@@ -1,0 +1,119 @@
+modules = ["nodejs-20", "python-3.11", "java-openjdk-17"]
+
+[nix]
+channel = "stable-24_05"
+packages = ["android-tools", "freetype", "lcms2", "libimagequant", "libjpeg", "libtiff", "libwebp", "libxcrypt", "openjpeg", "tcl", "tk", "zlib"]
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "API Server"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Mobile App Fresh"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "React Native Stable"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "React Native Local"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "MileTracker Native Dev"
+
+[[workflows.workflow]]
+name = "API Server"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd api-server && node server.js"
+waitForPort = 3001
+
+[[workflows.workflow]]
+name = "Mobile App Fresh"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd mobile-web-app && python3 -m http.server 5000"
+waitForPort = 5000
+
+[[workflows.workflow]]
+name = "React Native Stable"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd react-native-app && npx expo start --tunnel --clear"
+waitForPort = 19000
+
+[[workflows.workflow]]
+name = "React Native Local"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd react-native-app && npx expo start --lan --clear"
+
+[[workflows.workflow]]
+name = "MileTracker Native Dev"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd MileTrackerPro && npx expo start --go --tunnel --clear --port 8084"
+
+[deployment]
+run = ["sh", "-c", "node server.js"]
+
+[[ports]]
+localPort = 3001
+externalPort = 3001
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[[ports]]
+localPort = 8080
+externalPort = 8080
+
+[[ports]]
+localPort = 8081
+externalPort = 8081
+
+[[ports]]
+localPort = 8082
+externalPort = 3000
+
+[[ports]]
+localPort = 8083
+externalPort = 4200
+
+[[ports]]
+localPort = 8084
+externalPort = 5000
+
+[[ports]]
+localPort = 8085
+externalPort = 5173
+
+[[ports]]
+localPort = 19000
+externalPort = 3002
+
+[[ports]]
+localPort = 19001
+externalPort = 3003

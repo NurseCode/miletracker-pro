@@ -1,0 +1,15 @@
+MileTracker v20.0 - Stable Build
+
+PREVIEW: localhost:5000 (working)
+EXPO TUNNEL: exp://doxkdxm-anonymous-8081.exp.direct
+
+INSTRUCTIONS:
+1. Open Expo Go app on your phone
+2. Tap "Enter URL manually" at the bottom
+3. Copy and paste: exp://doxkdxm-anonymous-8081.exp.direct
+4. Test the flexible receipt cropping feature
+
+QR CODE LINK:
+https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=exp://doxkdxm-anonymous-8081.exp.direct
+
+STATUS: Both preview and tunnel are now working with fresh builds

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MileTracker Pro - Receipt Reports Ready</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        .logo {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        h1 {
+            color: #333;
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+        }
+        .version {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        .features {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .features h3 {
+            color: #333;
+            margin: 0 0 15px 0;
+            font-size: 1.1rem;
+        }
+        .features ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #666;
+        }
+        .features li {
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        .url-box {
+            background: #e3f2fd;
+            border: 2px solid #2196F3;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            color: #1976D2;
+            word-break: break-all;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .url-box:hover {
+            background: #bbdefb;
+        }
+        .instructions {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-top: 20px;
+        }
+        .highlight {
+            color: #2196F3;
+            font-weight: 600;
+        }
+        .success-badge {
+            background: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">📱💼</div>
+        <h1>MileTracker Pro</h1>
+        <div class="version">Receipt Reports System - v20.0</div>
+        
+        <div class="success-badge">✓ RECEIPT REPORTING READY</div>
+        
+        <div class="features">
+            <h3>📋 New Receipt Export Features:</h3>
+            <ul>
+                <li><strong>Individual Receipt Viewer:</strong> Tap receipt thumbnails for full-screen viewing and sharing</li>
+                <li><strong>Bulk Export Options:</strong> Weekly, bi-weekly, monthly, quarterly, and annual reports</li>
+                <li><strong>Custom Date Ranges:</strong> Select any specific period for your pay schedule</li>
+                <li><strong>Smart Email Handling:</strong> Automatically limits attachments to prevent delivery issues</li>
+                <li><strong>Complete Packages:</strong> Organized folders with all receipt images and detailed reports</li>
+                <li><strong>Employer Ready:</strong> Professional formatting for reimbursement and tax documentation</li>
+            </ul>
+        </div>
+
+        <div class="url-box" onclick="copyToClipboard(this.textContent)">
+            exp://doxkdxm-anonymous-8081.exp.direct
+        </div>
+        
+        <div class="instructions">
+            <strong>Testing Instructions:</strong><br>
+            1. Open <span class="highlight">Expo Go</span> on your phone<br>
+            2. Scan the QR code from the React Native terminal above<br>
+            3. Navigate to the <span class="highlight">Export</span> tab<br>
+            4. Test the new <span class="highlight">Receipt Reports</span> section<br>
+            5. Try both preset periods and custom date ranges<br>
+            6. Test individual receipt viewing by tapping receipt thumbnails on trip cards
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const box = document.querySelector('.url-box');
+                const originalBg = box.style.backgroundColor;
+                box.style.backgroundColor = '#4CAF50';
+                box.style.color = 'white';
+                setTimeout(() => {
+                    box.style.backgroundColor = originalBg;
+                    box.style.color = '#1976D2';
+                }, 1000);
+            });
+        }
+    </script>
+</body>
+</html>
