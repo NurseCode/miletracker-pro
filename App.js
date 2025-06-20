@@ -1,5 +1,3 @@
-REPLACE YOUR GITHUB App.js WITH THIS SIMPLIFIED VERSION:
-
 import React, { useState, useEffect, useRef } from 'react';
 import { 
   View, 
