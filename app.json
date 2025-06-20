@@ -4,56 +4,9 @@
     "slug": "miletracker-pro",
     "version": "20.5.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#667eea"
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.miletrackerpro.app"
-    },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#667eea"
-      },
-      "package": "com.miletrackerpro.app",
-      "permissions": [
-        "ACCESS_FINE_LOCATION",
-        "ACCESS_COARSE_LOCATION",
-        "CAMERA",
-        "WRITE_EXTERNAL_STORAGE",
-        "READ_EXTERNAL_STORAGE",
-        "android.permission.CAMERA",
-        "android.permission.RECORD_AUDIO",
-        "android.permission.ACCESS_COARSE_LOCATION",
-        "android.permission.ACCESS_FINE_LOCATION"
-      ]
+      "package": "com.miletrackerpro.app"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "plugins": [
-      [
-        "expo-camera",
-        {
-          "cameraPermission": "Allow MileTracker Pro to access your camera to capture receipt photos."
-        }
-      ],
-      [
-        "expo-location",
-        {
-          "locationAlwaysAndWhenInUsePermission": "Allow MileTracker Pro to use your location for automatic trip tracking.",
-          "locationWhenInUsePermission": "Allow MileTracker Pro to use your location for automatic trip tracking."
-        }
-      ]
-    ],
     "extra": {
       "eas": {
         "projectId": "18ccbc9a-e560-4d1f-a221-a2fab6f8a24a"
